@@ -1,0 +1,92 @@
+;; Includes the Shared Variables (fonts, icons, boxes, etc.)
+INCLUDE = "PF2e_Shared_Variables.txt"
+
+
+;; == The folder to read images from
+;; == Make sure to change it to the category of items you want to print
+;; == Unless you use option 3. below.
+;; == file_name_suffix is appended to the name of the PDF file, useful
+;; == if creating multiple PDFs from the same category.
+[card_category] = "Item_Consumables"
+[file_name_suffix] = "TODAY"
+[working_directory] = JOIN([directory_pf2e_cards], "\", [card_category], "\")
+
+
+;; ==================================================
+;; == There are 3 ways to get the card images you want to
+;; == create a PDF from. Enable the set of lines that
+;; == corresponds to your needs
+
+;; == 1. Read all images in the given directory and create a list
+;; == This is useful if the cards you want as a PDF are all from the
+;; == same category and only those cards are in the folder.
+[front] = DIRFILES(JOIN([working_directory], "*front.png"))
+[back] = DIRFILES(JOIN([working_directory], "*back.png"))
+
+;; == 2. A hardcoded list if only specific cards are wanted
+;; == This is useful if you only want to print a few specific cards from a category.
+;; == Also useful if you want multiple of the same card on a single page.
+;; == Here's an example of selecting cards from the same directory as [card_category]
+;[hardcoded_cards] = "Create_a_Diversion|Demoralize|Demoralize"
+;[front] = JOIN([working_directory], [hardcoded_cards], "_front.png")
+;[back] = JOIN([working_directory], [hardcoded_cards], "_back.png")
+
+;; == 3. A hardcoded list of cards from different directories
+;; == This is useful if you want to fit cards from different categories
+;; == on the same page. For example, you might be printing some feats,
+;; == spells, and items for your character
+;{[hardcoded_cards] = "
+;    Skill_vs_Defense\Create_a_Diversion
+;    |Skill_vs_Defense\Disarm
+;    |Skill_vs_Defense\Escape
+;    |Skill_vs_Defense\Feint
+;    |Skill_vs_Defense\Grapple
+;    |Skill_vs_Defense\Hide
+;    |Skill_vs_Defense\Reposition
+;    |Skill_vs_Defense\Shove
+;    |Skill_vs_Defense\Trip
+;    "}
+;[front] = JOIN([directory_pf2e_cards], "\", [hardcoded_cards], "_front.png")
+;[back] = JOIN([directory_pf2e_cards], "\", [hardcoded_cards], "_back.png")
+;; ============================================================
+
+
+;; Create ranges for each list
+[rangefront] = 1-{(front)}
+[rangeback] = {(front)+1}-{(front)+(back)}
+
+
+;; Sets the bleed markers on the page
+BORDER = RECTANGLE, #000000, 0.5, MARKDOT
+
+
+;; ============================================================
+;; == This section determines how the PDF is named.
+;; == 1. This option simply uses the name of the category defined above
+;; == along with the file_name_suffix.
+[file_name] = JOIN([card_category], "_", [file_name_suffix])
+
+;; == 2. If you want to use a different name for the PDF than the card category,
+;; == enable the line below and write the name.
+;[file_name] = "Session 11"
+;; ============================================================
+
+
+; Loads the images from the ranges from above
+IMAGE = [rangefront], [front], 0, 0, 100%, 100%
+
+
+;; ============================================================
+;; == There are two ways to create a PDF
+;; == 1. For Duplex printing (printing both front and back of cards
+;; == on the same page), enable this section
+;IMAGE = [rangeback], [back], 0, 0, 100%, 100%
+;DUPLEX = [rangefront], [rangeback]
+;PRINT = DUPLEX
+
+;; == 2. For single side printing, enable this sole PRINT
+PRINT = [rangefront]
+;; ============================================================
+
+
+SAVEPDF = JOIN([directory_pf2e_cards], "\", [file_name], ".pdf")

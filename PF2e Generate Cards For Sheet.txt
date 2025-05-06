@@ -1,0 +1,49 @@
+; Includes the Shared Variables (fonts, icons, boxes, etc.)
+INCLUDE = "PF2e_Shared_Variables.txt"
+
+
+;; ==================================================
+;; == The sheet name to read data from, also used as the directory to save the images in
+;[card_category] = "Simple_Action"
+;[card_category] = "Skill_vs_Defense"
+;[card_category] = "Spells"
+;[card_category] = "Custom_Cards"
+[card_category] = "Item_Consumables"
+;; ==================================================
+
+
+; Respect linebreaks in the text in the data
+LINKNEW = <br>
+
+
+;; ==================================================
+;; == Link to the sheet that's being used for the cards
+LINK = JOIN("GOOGLE_SHEETS_ID_GOES_HERE-377riymgW4eLRoURrabAw", "!", [card_category])
+;; ==================================================
+
+
+; Where to save the cards locally
+[card_location] = JOIN([directory_pf2e_cards], "\", [card_category], "\")
+
+
+; Create the front side of the cards
+[cards_to_make_front] = LABELRANGE([GENERATECARD], 1)
+INCLUDE = "PF2e_Positioning_Front.txt"
+INCLUDE = "PF2e_Visual_Front_Common.txt"
+SAVE = [cards_to_make_front], JOIN([card_location], REPLACE([ACTIONNAME], " ", "_"), "_front.png"), 0, 0, 100%, 100%
+
+
+;; ==================================================
+;; == Enable this section to create the back side of the cards
+;[cards_to_make_back] = [cards_to_make_front]
+;INCLUDE = "PF2e_Positioning_Back.txt"
+
+;; == Enable one of these two lines depending whether you want backs
+;; == without images
+;INCLUDE = "PF2e_Visual_Back_Common.txt"
+;; == or with images. Note, only the "Item_Consumables" sheet is set up
+;; == to allow for images
+;;INCLUDE = "PF2e_Visual_Back_Items_with_Image.txt"
+
+;SAVE = [cards_to_make_back], JOIN([card_location], REPLACE([ACTIONNAME], " ", "_"), "_back.png"), 0, 0, 100%, 100%
+;; ==================================================

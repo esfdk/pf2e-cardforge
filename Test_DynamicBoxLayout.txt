@@ -1,0 +1,49 @@
+UNIT=MM
+[text1]="<box><head><trait>TRAIT</trait> Passive Ability Name</head>Passive ability sample description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ligula tellus, eleifend dapibus porttitor id, vestibulum id neque.</box><br><box>(star)(30)<head>Damaging Active Ability</head></box><br><box>(star)(30)<head>Act Ab. with dmg + effect</head>Attack Description. Deals 30 damage. Sample secondary effect. This is optional if the attack has no secondary effect.</box><br><box>(dot)<head>Active Ability w/o damage</head>Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</box>"
+[text2]="<box> <head> <trait>TRAIT</trait> Passive Ability Name </head> Passive ability sample description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ligula tellus, eleifend dapibus porttitor id, vestibulum id neque. </box> <br> <box> (star)(30) <head>Damaging Active Ability</head> </box> <br> (star)(30) <head>Act Ab. with dmg + effect</head> Attack Description. Deals 30 damage. Sample secondary effect. This is optional if the attack has no secondary effect. <br> <box> (dot) <head>Active Ability w/o damage</head> Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </box>"
+
+
+[text3] = "<box> <head> <trait>TRAIT</trait> Passive Ability Name </head> Passive ability sample description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ligula tellus, eleifend dapibus porttitor id, vestibulum id neque. </box> <br> <box> (star)(30) <head>Damaging Active Ability</head> </box> <br> <box_dashed> (star)(30) <head>Act Ab. with dmg + effect</head> Attack Description. Deals 30 damage. Sample secondary effect. This is optional if the attack has no secondary effect. </box_dashed> <br> <box> (dot) <head>Active Ability w/o damage</head> Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </box>"
+[text4] = "<box> <head> <trait>TRAIT</trait> Passive Ability Name </head> Passive ability sample description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ligula tellus, eleifend dapibus porttitor id, vestibulum id neque. </box> (break) <box_none> (star)(30) <head>Damaging Active Ability</head> </box_none> (break) <box_dashed> (star)(30) <head>Act Ab. with dmg + effect</head> Attack Description. Deals 30 damage. Sample secondary effect. This is optional if the attack has no secondary effect. </box_dashed> (break) <box_dotted> (dot) <head>Active Ability w/o damage</head> Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </box_dotted>"
+
+[text5] = "<box> <head> <trait>TRAIT</trait> Passive Ability Name </head> Passive ability sample description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ligula tellus, eleifend dapibus porttitor id, vestibulum id neque. </box> (break) <box_none> (star)(30) <head>Damaging Active Ability</head> </box_none> (break) <box_dashed> (star)(30) <head>Act Ab. with dmg + effect</head> Attack Description. Deals 30 damage. Sample secondary effect. This is optional if the attack has no secondary effect. </box_dashed> (break) <f_bottom> <box_dotted> (dot) <head>Active Ability w/o damage</head> Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </box_dotted> </f_bottom>"
+[text6] = "<box> <head> <trait>TRAIT</trait> Passive Ability Name </head> Passive ability sample description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ligula tellus, eleifend dapibus porttitor id, vestibulum id neque. </box> (break) <box_none> (star)(30) <head>Damaging Active Ability</head> </box_none> (break) <box_dashed> (star)(30) <head>Act Ab. with dmg + effect</head> Attack Description. Deals 30 damage. Sample secondary effect. This is optional if the attack has no secondary effect. </box_dashed> (break) <f_bottom> <box_dotted> (dot) <head>Active Ability w/o damage</head> Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Status move Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </box_dotted> </f_bottom>"
+
+[text_size] = 10
+HTMLFONTSTEP= , 0.5, 0, 1
+
+htmlfont=default,arial,[text_size],,#000000,left
+htmlmargins=default,0,0,0,0
+
+htmlfont=f_bottom,arial,[text_size],,#000000,left
+htmlmargins=f_bottom,0,0,0,0, bottom
+
+htmlfont=head,arial,10,B,#000000,center
+
+htmlfont=trait,impact,10,BI,#44C9AC,,0,0,0,,#000000,0.8%
+
+HTMLFONT = break, Arial, [text_size], , #000000, LEFT
+HTMLMARGINS = break, 0, 0, 0, 1.5
+HTMLKEY = , (break), , break
+
+HTMLFONT    = box, arial, [text_size], , #000000, left
+HTMLBORDER  = box, RECTANGLE, #000000, 1%, 1%, 1%, 1%, 1%
+
+HTMLFONT    = box_none, arial, [text_size], , #000000, left
+HTMLBORDER  = box_none, NONE, #000000, 1%, 1%, 1%, 1%, 1%, 2%
+
+HTMLFONT    = box_rounded, arial, [text_size], , #000000, left
+HTMLBORDER  = box_rounded, RECTANGLE, #000000, 1%, 1%, 1%, 1%, 1%, 2%
+
+HTMLFONT    = box_dashed, arial, [text_size], , #000000, left
+HTMLBORDER  = box_dashed, DASHED, #000000, 1%, 1%, 1%, 1%, 1%, 2%
+
+HTMLFONT    = box_dotted, arial, [text_size], , #000000, left
+HTMLBORDER  = box_dotted, DOTTED, #000000, 1%, 1%, 1%, 1%, 1%, 2%
+
+;htmlimage=,(star),"Icons/ia_ONEA.png",5%,5%,PL
+;htmlimage=,(dot),"Icons/ia_Reac.png",5%,5%,PL
+;htmlimage=,(30),"Icons/ia_Pass.png",10%,6%,PR
+
+RECTANGLE = 1-{(text6)}, 6%, 10%, 88%, 80%, #06b025
+htmltext = 1-{(text6)}, [text6], 6%, 10%, 88%, 80%, #FFFFFF, 0, EFM, 100, default

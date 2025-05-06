@@ -1,0 +1,18 @@
+; ==============================
+; Positioning Front
+; ==============================
+
+
+; Action Name
+[pf_an_y] = 5%
+[pf_an_height] = 7%
+
+
+; Traits
+[pf_tra_y] = 96.6%
+[pf_tra_height] = 100% - ([pf_tra_y] + 0.05%)
+
+
+; Rules Text, the only dynamic-sized element
+[pf_rules_y] = [pf_an_y] + [pf_an_height] + [p_vert_space]
+[pf_rules_height] = 100% - ([p_margin_bot] + [pf_rules_y])

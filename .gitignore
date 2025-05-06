@@ -1,0 +1,20 @@
+# Don't distribute the Nandeck executable, as it is not my work
+*.exe
+
+# Other Nandeck related files (config and similar) that don't need to be shared
+nanDECK.ini
+shortcuts.txt
+
+# Don't distribute the fonts used for the cards, as they are also not my work
+*.ttf
+
+# Don't distribute images used for the cards, as they are also not my work
+Images/**/*.png
+Images/**/*.jpg
+Images/**/*.jpeg
+Images/**/*.gif
+Images/**/*.bmp
+
+# The generated cards serve no purpose in being in the repository
+Cards/**/*.png
+Cards/**/*.pdf

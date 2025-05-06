@@ -1,0 +1,34 @@
+; ==============================
+; Visual Back Item with Image
+; ==============================
+
+; Card Template
+IMAGE = [cards_to_make_back], [CARDTEMPLATEFILE], 0%, 0%, 100%, 100%, 0, T
+
+; Card Header
+HTMLTEXT = [cards_to_make_back], [CARDHEADER], [p_ch_x], [p_ch_y], [p_ch_width], [p_ch_height], #FFFFFF, 0, EBFM, 100, f_header
+
+; Action Name
+HTMLTEXT = [cards_to_make_back], [ACTIONNAME], [p_margin_left], [pb_an_y], [p_width], [pb_an_height], #FFFFFF, 0, EBJM, 100, f_actionNameCentered_back
+
+; Line
+;LINE = [cards_to_make_back], [p_margin_left], [pb_ml_y], [p_margin_right], [pb_ml_y], #000000, 0.5%
+
+; Action Icon
+HTMLTEXT = [cards_to_make_back], [ACTIONICON], [p_margin_left], [pb_ai_y], [p_width], [pb_ai_height], #FFFFFF, 0, EBJM, 100, f_center_b
+
+; Action Level
+HTMLTEXT = [cards_to_make_back], [ACTIONLEVEL], [p_margin_left], [pb_al_y], [p_width], [pb_al_height], #FFFFFF, 0, EBFM, 100, f_center_b
+
+; Item Image
+[pb_iimage_width] = 40%
+[pb_iimage_height] = 40%
+[pb_iimage_x] = 50% - ([pb_iimage_width] / 2)
+[pb_iimage_y] = 40%
+
+IMAGE = [cards_to_make_back], [ITEMIMAGEFILENAME], [pb_iimage_x], [pb_iimage_y], [pb_iimage_width], [pb_iimage_height], 0, TCP
+
+
+; Traits
+HTMLTEXT = [cards_to_make_back], [TRAITSICONS], [pb_tra_x], [pb_tra_y], [pb_tra_width], [pb_tra_height], #000000, 0, EBFM, 100, f_traits
+

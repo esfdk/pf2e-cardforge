@@ -1,0 +1,18 @@
+; ==============================
+; Visual Front Common
+; ==============================
+
+; Card Template
+IMAGE= [cards_to_make_front], [CARDTEMPLATEFILE], 0%, 0%, 100%, 100%, 0, T
+
+; Card Header
+HTMLTEXT= [cards_to_make_front], [ACTIONLEVEL], [p_ch_x], [p_ch_y], [p_ch_width], [p_ch_height], #FFFFFF, 0, EBFM, 100, f_header
+
+; Action Name
+HTMLTEXT = [cards_to_make_front], [ACTIONNAMEWITHICON], [p_margin_left], [pf_an_y], [p_width], [pf_an_height], #FFFFFF, 0, EBJM, 100, f_actionNameCentered
+
+; Rules Text
+HTMLTEXT = [cards_to_make_front], [RULESTEXT], [p_margin_left], [pf_rules_y], [p_width], [pf_rules_height], #FFFFFF, 0, EBFM, 100, default
+
+; Traits IMPORTANTTRAITSICONS
+HTMLTEXT = [cards_to_make_front], [TRAITSICONS], [p_margin_left], [pf_tra_y], [p_width], [pf_tra_height], #000000, 0, EBFM, 100, f_traits

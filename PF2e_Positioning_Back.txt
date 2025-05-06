@@ -1,0 +1,33 @@
+; ==============================
+; Positioning Back
+; ==============================
+
+; Middle Line
+[pb_ml_y] = 50%
+
+
+; Action Name
+[pb_an_height] = 16%
+[pb_an_y] = [pb_ml_y] - ([pb_an_height] + ([p_vert_space] * 2)) - 7%
+
+
+; Action Icon
+[pb_ai_height] = 6%
+[pb_ai_y] = [pb_ml_y] + ([p_vert_space] * 4)
+
+
+; Traits
+[pb_tra_x] = [p_margin_left] * 2
+[pb_tra_height] = 12%
+[pb_tra_y] = 100% - [p_margin_bot] - [pb_tra_height]
+[pb_tra_width] = 100% - ([pb_tra_x] * 2)
+
+
+; Action Level
+[pb_al_height] = 6%
+; V1
+;[pb_al_y] = [pb_ml_y] + ([p_vert_space] * 2)
+; V2
+;[pb_al_y] = [pb_tra_y] - ([pb_al_height] + ([p_vert_space] * 4))
+; V3
+[pb_al_y] = 5%

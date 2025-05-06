@@ -1,0 +1,540 @@
+UNIT = MM
+; Standard Size
+;CARDSIZE = 65, 91  ; Old MtG size
+CARDSIZE = 63, 92  ; Standard MtG Card size, with a bit more height to fill out the sleeves
+;CARDSIZE = 81, 120  ; Tarot card size
+PAGE = 210, 297, PORTRAIT, HV
+MARGINS = 0, 0, 0, 0
+
+; ==============================
+; Directories
+; ==============================
+
+[directory_pf2e_cards] = "Cards"
+
+; ==============================
+; Fonts
+; ==============================
+
+[text_size] = 10
+HTMLFONTSTEP= , 0.5, 0, 1
+
+
+; ----------
+; Default Text
+; ----------
+HTMLFONT= default, Crimson Pro, [text_size], D, #000000, LEFT
+HTMLFONT = f_center, Crimson Pro, [text_size], D, #000000, CENTER
+HTMLFONT = f_center_b, Crimson Pro, [text_size], BD, #000000, CENTER
+
+HTMLFONT = f_bottom, Crimson Pro, [text_size], D, #000000, LEFT
+HTMLMARGINS = f_bottom, 0, 0, 0, 0, BOTTOM
+
+
+; ----------
+; Header
+; ----------
+HTMLFONT = f_header, Crimson Pro, [text_size], BRD, #000000, CENTER, 0, 0, 0, 0, #FFFFFF, 0.15%
+HTMLMARGINS = f_header, 0, 0, 0, 0, CENTER
+
+
+; ----------
+; Action
+; ----------
+HTMLFONT = f_actionNameCentered, Taroca, [text_size], D, #000000, CENTER
+HTMLMARGINS = f_actionNameCentered, 0, 0, 0, 0, CENTER
+
+HTMLFONT = f_actionNameCentered_back, Taroca, [text_size], D, #000000, CENTER
+HTMLMARGINS = f_actionNameCentered_back, 0, 0, 0, 0, BOTTOM
+
+HTMLFONT = f_actionName, Taroca, [text_size], D, #000000
+HTMLKEY = , "(act)", "<f_actionName>"
+HTMLKEY = , "(/act)", "</f_actionName>"
+
+
+; ----------
+; Break with a bit of line spacing
+; ----------
+HTMLFONT = break, Crimson Pro, [text_size], , #000000, LEFT
+HTMLMARGINS = break, 0, 0, 0, 1.5
+HTMLKEY = , (break), , break
+
+
+; ----------
+; Bold/Italic/Underline font
+; ----------
+HTMLKEY = , "(b)", "<b>"
+HTMLKEY = , "(/b)", "</b>"
+
+HTMLKEY = , "(i)", "<i>"
+HTMLKEY = , "(/i)", "</i>"
+
+HTMLKEY = , "(u)", "<u>"
+HTMLKEY = , "(/u)", "</u>"
+
+HTMLKEY = , "(s)", "<s>"
+HTMLKEY = , "(/s)", "</s>"
+
+; ----------
+; Colors
+; ----------
+; General highlight
+HTMLFONT= highlight, Crimson Pro, [text_size], BD, #1065ab
+
+; Damage types
+HTMLFONT = cdt_acid, Crimson Pro, [text_size], BRD, #027702
+HTMLFONT = cdt_bludgeoning, Crimson Pro, [text_size], BRD, #827E7E
+HTMLFONT = cdt_cold, Crimson Pro, [text_size], BRD, #0000FF
+HTMLFONT = cdt_electricity, Crimson Pro, [text_size], BRD, #1E90FF
+HTMLFONT = cdt_fire, Crimson Pro, [text_size], BRD, #FF4500
+HTMLFONT = cdt_piercing, Crimson Pro, [text_size], BRD, #734646
+HTMLFONT = cdt_poison, Crimson Pro, [text_size], BRD, #C248E1
+HTMLFONT = cdt_slashing, Crimson Pro, [text_size], BRD, #AE1C1C
+HTMLFONT = cdt_vitality, Crimson Pro, [text_size], BRD, #AE8319
+
+
+; ----------
+; Lists
+; ----------
+HTMLKEY = , "(li_i)", "&#x2022 "
+
+
+; ----------
+; Skill and Defense font
+; ----------
+HTMLFONT = f_skill, Crimson Pro, [text_size], D, #1b7939
+HTMLKEY = , "(ski)", "<f_skill>"
+HTMLKEY = , "(/ski)", "</f_skill>"
+
+HTMLFONT = f_defense, Crimson Pro, [text_size], D, #742881
+HTMLKEY = , "(def)", "<f_defense>"
+HTMLKEY = , "(/def)", "</f_defense>"
+
+
+; ----------
+; Degrees of Success colors
+; ----------
+HTMLFONT = f_critSucc, Crimson Pro, [text_size], BD, #2f67b1
+HTMLFONT = f_succ, Crimson Pro, [text_size], BD, #4393fd
+HTMLFONT = f_fail, Crimson Pro, [text_size], BD, #e5342a
+HTMLFONT = f_critFail, Crimson Pro, [text_size], BD, #bf2c23
+
+
+; ==============================
+; Boxes
+; ==============================
+[box_thickness] = 0.5%
+[box_gap_top] = 1%
+[box_gap_left] = 1%
+[box_gap_right] = 1%
+[box_gap_bottom] = 1%
+[box_corner_rounding] = 2%
+
+HTMLFONT    = box, Crimson Pro, [text_size], , #000000, left
+HTMLBORDER  = box, RECTANGLE, #000000, [box_thickness], [box_gap_top], [box_gap_left], [box_gap_right], [box_gap_bottom]
+
+HTMLFONT    = box_none, Crimson Pro, [text_size], , #000000, left
+HTMLBORDER  = box_none, NONE, #000000, [box_thickness], [box_gap_top], [box_gap_left], [box_gap_right], [box_gap_bottom], [box_corner_rounding]
+
+HTMLFONT    = box_rounded, Crimson Pro, [text_size], , #000000, left
+HTMLBORDER  = box_rounded, RECTANGLE, #000000, [box_thickness], [box_gap_top], [box_gap_left], [box_gap_right], [box_gap_bottom], [box_corner_rounding]
+
+HTMLFONT    = box_dashed, Crimson Pro, [text_size], , #000000, left
+HTMLBORDER  = box_dashed, DASHED, #000000, [box_thickness], [box_gap_top], [box_gap_left], [box_gap_right], [box_gap_bottom], [box_corner_rounding]
+
+HTMLFONT    = box_dotted, Crimson Pro, [text_size], , #000000, left
+HTMLBORDER  = box_dotted, DOTTED, #000000, [box_thickness], [box_gap_top], [box_gap_left], [box_gap_right], [box_gap_bottom], [box_corner_rounding]
+
+
+; ==============================
+; "Icons"
+; ==============================
+[traits_text_size] = 8
+HTMLFONT        = bor_trait, Arial, [traits_text_size], B, #FFFFFF
+HTMLMARGINS     = bor_trait, 0, 0, 0, 0, , 170
+HTMLBORDER      = bor_trait, RECTANGLE, #D5C489, 0.03, 0.3, 0.8, 0.8, 0.3, 0, #531004
+
+HTMLFONT        = bor_trait_important, Arial, [traits_text_size], B, #FFFFFF
+HTMLMARGINS     = bor_trait_important, 0, 0, 0, 0, , 170
+HTMLBORDER      = bor_trait_important, RECTANGLE, #D5C489, 0.03, 0.3, 0.8, 0.8, 0.3, 0, #531004
+
+HTMLFONT        = f_traits, Arial, [traits_text_size], , #000000, CENTER
+HTMLMARGINS     = f_traits, 0, 0, 0, 0, CENTER
+
+HTMLKEY = , (it_Aasi), "Aasimar", bor_trait
+HTMLKEY = , (it_Abju), "Abjuration", bor_trait
+HTMLKEY = , (it_Acid), "Acid", bor_trait
+HTMLKEY = , (it_Addi), "Additive", bor_trait
+HTMLKEY = , (it_Adjuste), "Adjusted", bor_trait
+HTMLKEY = , (it_Adjustm), "Adjustment", bor_trait
+HTMLKEY = , (it_Afte), "Aftermath", bor_trait
+HTMLKEY = , (it_Agil), "Agile", bor_trait
+HTMLKEY = , (it_Air), "Air", bor_trait
+HTMLKEY = , (it_Aiuv), "Aiuvarin", bor_trait
+HTMLKEY = , (it_Alchemic), "Alchemical", bor_trait
+HTMLKEY = , (it_Alchemis), "Alchemist", bor_trait
+HTMLKEY = , (it_Amp), "Amp", bor_trait
+HTMLKEY = , (it_Anad), "Anadi", bor_trait
+HTMLKEY = , (it_Ance), "Ancestry", bor_trait
+HTMLKEY = , (it_Andr), "Android", bor_trait
+HTMLKEY = , (it_Anima), "Animal", bor_trait
+HTMLKEY = , (it_Animi), "Animist", bor_trait
+HTMLKEY = , (it_Apex), "Apex", bor_trait
+HTMLKEY = , (it_Apho), "Aphorite", bor_trait
+HTMLKEY = , (it_Appa), "Apparition", bor_trait
+HTMLKEY = , (it_Aqua), "Aquadynamic", bor_trait
+HTMLKEY = , (it_Arca), "Arcane", bor_trait
+HTMLKEY = , (it_Arch), "Archetype", bor_trait
+HTMLKEY = , (it_Arda), "Ardande", bor_trait
+HTMLKEY = , (it_Arti), "Artifact", bor_trait
+HTMLKEY = , (it_Atha), "Athamaru", bor_trait
+HTMLKEY = , (it_Attach), "Attached", bor_trait
+HTMLKEY = , (it_Attack), "Attack", bor_trait_important
+HTMLKEY = , (it_Audi), "Auditory", bor_trait
+HTMLKEY = , (it_Aura), "Aura", bor_trait
+HTMLKEY = , (it_Auto), "Automaton", bor_trait
+HTMLKEY = , (it_Awak), "Awakened", bor_trait
+HTMLKEY = , (it_Backst), "Backstabber", bor_trait
+HTMLKEY = , (it_Backsw), "Backswing", bor_trait
+HTMLKEY = , (it_Barb), "Barbarian", bor_trait
+HTMLKEY = , (it_Bard), "Bard", bor_trait
+HTMLKEY = , (it_Bardi), "Barding", bor_trait
+HTMLKEY = , (it_Beas), "Beastkin", bor_trait
+HTMLKEY = , (it_Bomb), "Bomb", bor_trait
+HTMLKEY = , (it_Bott), "Bottled Breath", bor_trait
+HTMLKEY = , (it_Brac), "Brace", bor_trait
+HTMLKEY = , (it_Brav), "Bravado", bor_trait
+HTMLKEY = , (it_Brut), "Brutal", bor_trait
+HTMLKEY = , (it_Bulw), "Bulwark", bor_trait
+HTMLKEY = , (it_Call), "Calling", bor_trait
+HTMLKEY = , (it_Cant), "Cantrip", bor_trait
+HTMLKEY = , (it_Capa), "Capacity", bor_trait
+HTMLKEY = , (it_Cata), "Catalyst", bor_trait
+HTMLKEY = , (it_Cens), "Censer", bor_trait
+HTMLKEY = , (it_Cent), "Centaur", bor_trait
+HTMLKEY = , (it_Cham), "Champion", bor_trait
+HTMLKEY = , (it_Chan), "Changeling", bor_trait
+HTMLKEY = , (it_Char), "Charm", bor_trait
+HTMLKEY = , (it_Clas), "Class", bor_trait
+HTMLKEY = , (it_Cler), "Cleric", bor_trait
+HTMLKEY = , (it_Clim), "Climbing", bor_trait
+HTMLKEY = , (it_Cloc), "Clockwork", bor_trait
+HTMLKEY = , (it_Coag), "Coagulant", bor_trait
+HTMLKEY = , (it_Cobb), "Cobbled", bor_trait
+HTMLKEY = , (it_Coda), "Coda", bor_trait
+HTMLKEY = , (it_Cold), "Cold", bor_trait
+HTMLKEY = , (it_Comb), "Combination", bor_trait
+HTMLKEY = , (it_Comf), "Comfort", bor_trait
+HTMLKEY = , (it_Comm), "Common", bor_trait
+HTMLKEY = , (it_Compa), "Companion", bor_trait
+HTMLKEY = , (it_Compo), "Composite", bor_trait
+HTMLKEY = , (it_Compos), "Composition", bor_trait
+HTMLKEY = , (it_Concea), "Concealable", bor_trait
+HTMLKEY = , (it_Concen), "Concentrate", bor_trait
+HTMLKEY = , (it_Conc), "Concussive", bor_trait
+HTMLKEY = , (it_Conj), "Conjuration", bor_trait
+HTMLKEY = , (it_Conr), "Conrasu", bor_trait
+HTMLKEY = , (it_Conse), "Consecration", bor_trait
+HTMLKEY = , (it_Consu), "Consumable", bor_trait
+HTMLKEY = , (it_Conta), "Contact", bor_trait
+HTMLKEY = , (it_Conti), "Contingency", bor_trait
+HTMLKEY = , (it_Contr), "Contract", bor_trait
+HTMLKEY = , (it_Crit), "Critical Fusion", bor_trait
+HTMLKEY = , (it_Curse), "Curse", bor_trait
+HTMLKEY = , (it_Curseb), "Cursebound", bor_trait
+HTMLKEY = , (it_Cursed), "Cursed", bor_trait
+HTMLKEY = , (it_Dark), "Darkness", bor_trait
+HTMLKEY = , (it_Dead), "Deadly", bor_trait
+HTMLKEY = , (it_Deat), "Death", bor_trait
+HTMLKEY = , (it_Dedi), "Dedication", bor_trait
+HTMLKEY = , (it_Defl), "Deflecting", bor_trait
+HTMLKEY = , (it_Dest), "Destiny", bor_trait
+HTMLKEY = , (it_Dete), "Detection", bor_trait
+HTMLKEY = , (it_Devi), "Deviant", bor_trait
+HTMLKEY = , (it_Disa), "Disarm", bor_trait
+HTMLKEY = , (it_Dise), "Disease", bor_trait
+HTMLKEY = , (it_Divina), "Divination", bor_trait
+HTMLKEY = , (it_Divin), "Divine", bor_trait
+HTMLKEY = , (it_Doub), "Double Barrel", bor_trait
+HTMLKEY = , (it_Down), "Downtime", bor_trait
+HTMLKEY = , (it_Drag), "Dragonblood", bor_trait
+HTMLKEY = , (it_Drom), "Dromaar", bor_trait
+HTMLKEY = , (it_Drug), "Drug", bor_trait
+HTMLKEY = , (it_Drui), "Druid", bor_trait
+HTMLKEY = , (it_Dwar), "Dwarf", bor_trait
+HTMLKEY = , (it_Eart), "Earth", bor_trait
+HTMLKEY = , (it_Eido), "Eidolon", bor_trait
+HTMLKEY = , (it_Elec), "Electricity", bor_trait
+HTMLKEY = , (it_Elf), "Elf", bor_trait
+HTMLKEY = , (it_Elix), "Elixir", bor_trait
+HTMLKEY = , (it_Emot), "Emotion", bor_trait
+HTMLKEY = , (it_Ench), "Enchantment", bor_trait
+HTMLKEY = , (it_Entr), "Entrench", bor_trait
+HTMLKEY = , (it_Esot), "Esoterica", bor_trait
+HTMLKEY = , (it_Evoc), "Evocation", bor_trait
+HTMLKEY = , (it_Evol), "Evolution", bor_trait
+HTMLKEY = , (it_Exem), "Exemplar", bor_trait
+HTMLKEY = , (it_Expa), "Expandable", bor_trait
+HTMLKEY = , (it_Expl), "Exploration", bor_trait
+HTMLKEY = , (it_Extr), "Extradimensional", bor_trait
+HTMLKEY = , (it_Fatal), "Fatal", bor_trait
+HTMLKEY = , (it_Fata), "Fatal Aim", bor_trait
+HTMLKEY = , (it_Fear), "Fear", bor_trait
+HTMLKEY = , (it_Fetc), "Fetchling", bor_trait
+HTMLKEY = , (it_Figh), "Fighter", bor_trait
+HTMLKEY = , (it_Figu), "Figurehead", bor_trait
+HTMLKEY = , (it_Fine), "Finesse", bor_trait
+HTMLKEY = , (it_Fini), "Finisher", bor_trait
+HTMLKEY = , (it_Fire), "Fire", bor_trait
+HTMLKEY = , (it_Fles), "Fleshwarp", bor_trait
+HTMLKEY = , (it_Flex), "Flexible", bor_trait
+HTMLKEY = , (it_Flou), "Flourish", bor_trait
+HTMLKEY = , (it_Focus), "Focus", bor_trait
+HTMLKEY = , (it_Focuse), "Focused", bor_trait
+HTMLKEY = , (it_Fold), "Foldaway", bor_trait
+HTMLKEY = , (it_Force), "Force", bor_trait
+HTMLKEY = , (it_Forcef), "Forceful", bor_trait
+HTMLKEY = , (it_Fort), "Fortune", bor_trait
+HTMLKEY = , (it_Free), "Free-Hand", bor_trait
+HTMLKEY = , (it_Fulu), "Fulu", bor_trait
+HTMLKEY = , (it_Gadg), "Gadget", bor_trait
+HTMLKEY = , (it_Ganz), "Ganzi", bor_trait
+HTMLKEY = , (it_Gene), "General", bor_trait
+HTMLKEY = , (it_Geni), "Geniekin", bor_trait
+HTMLKEY = , (it_Ghor), "Ghoran", bor_trait
+HTMLKEY = , (it_Gnom), "Gnome", bor_trait
+HTMLKEY = , (it_Gobl), "Goblin", bor_trait
+HTMLKEY = , (it_Golo), "Goloma", bor_trait
+HTMLKEY = , (it_Graf), "Graft", bor_trait
+HTMLKEY = , (it_Grap), "Grapple", bor_trait
+HTMLKEY = , (it_Grim), "Grimoire", bor_trait
+HTMLKEY = , (it_Grip), "Grippli", bor_trait
+HTMLKEY = , (it_Guns), "Gunslinger", bor_trait
+HTMLKEY = , (it_Half), "Halfling", bor_trait
+HTMLKEY = , (it_Hamp), "Hampering", bor_trait
+HTMLKEY = , (it_Harn), "Harnessed", bor_trait
+HTMLKEY = , (it_Heal), "Healing", bor_trait
+HTMLKEY = , (it_Heft), "Hefty", bor_trait
+HTMLKEY = , (it_Hex), "Hex", bor_trait
+HTMLKEY = , (it_Hind), "Hindering", bor_trait
+HTMLKEY = , (it_Holy), "Holy", bor_trait
+HTMLKEY = , (it_Huma), "Human", bor_trait
+HTMLKEY = , (it_Hung), "Hungerseed", bor_trait
+HTMLKEY = , (it_Ifri), "Ifrit", bor_trait
+HTMLKEY = , (it_Ikon), "Ikon", bor_trait
+HTMLKEY = , (it_Illu), "Illusion", bor_trait
+HTMLKEY = , (it_Impu), "Impulse", bor_trait
+HTMLKEY = , (it_Incapa), "Incapacitation", bor_trait_important
+HTMLKEY = , (it_Inca), "Incarnate", bor_trait
+HTMLKEY = , (it_Infu), "Infused", bor_trait
+HTMLKEY = , (it_Infusi), "Infusion", bor_trait
+HTMLKEY = , (it_Inge), "Ingested", bor_trait
+HTMLKEY = , (it_Inha), "Inhaled", bor_trait
+HTMLKEY = , (it_Inje), "Injection", bor_trait
+HTMLKEY = , (it_Inju), "Injury", bor_trait
+HTMLKEY = , (it_Insc), "Inscribed", bor_trait
+HTMLKEY = , (it_Integ), "Integrated", bor_trait
+HTMLKEY = , (it_Intel), "Intelligent", bor_trait
+HTMLKEY = , (it_Inven), "Inventor", bor_trait
+HTMLKEY = , (it_Inves), "Invested", bor_trait
+HTMLKEY = , (it_Investi), "Investigator", bor_trait
+HTMLKEY = , (it_Jous), "Jousting", bor_trait
+HTMLKEY = , (it_Kash), "Kashrishi", bor_trait
+HTMLKEY = , (it_Khol), "Kholo", bor_trait
+HTMLKEY = , (it_Kick), "Kickback", bor_trait
+HTMLKEY = , (it_Kine), "Kineticist", bor_trait
+HTMLKEY = , (it_Kits), "Kitsune", bor_trait
+HTMLKEY = , (it_Lami), "Laminar", bor_trait
+HTMLKEY = , (it_Laun), "Launching", bor_trait
+HTMLKEY = , (it_Lega), "Legacy", bor_trait
+HTMLKEY = , (it_Lesh), "Leshy", bor_trait
+HTMLKEY = , (it_Ligh), "Light", bor_trait
+HTMLKEY = , (it_Line), "Lineage", bor_trait
+HTMLKEY = , (it_Ling), "Linguistic", bor_trait
+HTMLKEY = , (it_Lita), "Litany", bor_trait
+HTMLKEY = , (it_Liza), "Lizardfolk", bor_trait
+HTMLKEY = , (it_Loze), "Lozenge", bor_trait
+HTMLKEY = , (it_Magi), "Magical", bor_trait
+HTMLKEY = , (it_Magu), "Magus", bor_trait
+HTMLKEY = , (it_Mani), "Manipulate", bor_trait
+HTMLKEY = , (it_Mech), "Mechanical", bor_trait
+HTMLKEY = , (it_Ment), "Mental", bor_trait
+HTMLKEY = , (it_Merf), "Merfolk", bor_trait
+HTMLKEY = , (it_Meta), "Metal", bor_trait
+HTMLKEY = , (it_Mind), "Mindshift", bor_trait
+HTMLKEY = , (it_Mini), "Minion", bor_trait
+HTMLKEY = , (it_Mino), "Minotaur", bor_trait
+HTMLKEY = , (it_Misf), "Misfortune", bor_trait
+HTMLKEY = , (it_Miss), "Missive", bor_trait
+HTMLKEY = , (it_Modi), "Modification", bor_trait
+HTMLKEY = , (it_Modu), "Modular", bor_trait
+HTMLKEY = , (it_Monk), "Monk", bor_trait
+HTMLKEY = , (it_Morp), "Morph", bor_trait
+HTMLKEY = , (it_Moun), "Mounted", bor_trait
+HTMLKEY = , (it_Move), "Move", bor_trait
+HTMLKEY = , (it_Mult), "Multiclass", bor_trait
+HTMLKEY = , (it_Muta), "Mutagen", bor_trait
+HTMLKEY = , (it_Myth), "Mythic", bor_trait
+HTMLKEY = , (it_Naga), "Nagaji", bor_trait
+HTMLKEY = , (it_Necr), "Necromancy", bor_trait
+HTMLKEY = , (it_Neph), "Nephilim", bor_trait
+HTMLKEY = , (it_Nois), "Noisy", bor_trait
+HTMLKEY = , (it_Nonl), "Nonlethal", bor_trait
+HTMLKEY = , (it_Oath), "Oath", bor_trait
+HTMLKEY = , (it_Occu), "Occult", bor_trait
+HTMLKEY = , (it_Oil), "Oil", bor_trait
+HTMLKEY = , (it_Olfa), "Olfactory", bor_trait
+HTMLKEY = , (it_Open), "Open", bor_trait
+HTMLKEY = , (it_Orac), "Oracle", bor_trait
+HTMLKEY = , (it_Orc), "Orc", bor_trait
+HTMLKEY = , (it_Orea), "Oread", bor_trait
+HTMLKEY = , (it_Over), "Overflow", bor_trait
+HTMLKEY = , (it_Parr), "Parry", bor_trait
+HTMLKEY = , (it_Pois), "Poison", bor_trait
+HTMLKEY = , (it_Poly), "Polymorph", bor_trait
+HTMLKEY = , (it_Pond), "Ponderous", bor_trait
+HTMLKEY = , (it_Popp), "Poppet", bor_trait
+HTMLKEY = , (it_Port), "Portable", bor_trait
+HTMLKEY = , (it_Poss), "Possession", bor_trait
+HTMLKEY = , (it_Poti), "Potion", bor_trait
+HTMLKEY = , (it_Prec), "Precious", bor_trait
+HTMLKEY = , (it_Pred), "Prediction", bor_trait
+HTMLKEY = , (it_Pres), "Press", bor_trait
+HTMLKEY = , (it_Prim), "Primal", bor_trait
+HTMLKEY = , (it_Proc), "Processed", bor_trait
+HTMLKEY = , (it_Prop), "Propulsive", bor_trait
+HTMLKEY = , (it_Psyc), "Psyche", bor_trait
+HTMLKEY = , (it_Radi), "Radiation", bor_trait
+HTMLKEY = , (it_Rage), "Rage", bor_trait
+HTMLKEY = , (it_Range), "Range", bor_trait
+HTMLKEY = , (it_Ranged), "Ranged", bor_trait
+HTMLKEY = , (it_Ranger), "Ranger", bor_trait
+HTMLKEY = , (it_Rare), "Rare", bor_trait
+HTMLKEY = , (it_Razi), "Razing", bor_trait
+HTMLKEY = , (it_Reac), "Reach", bor_trait
+HTMLKEY = , (it_Reck), "Reckless", bor_trait
+HTMLKEY = , (it_Reco), "Recovery", bor_trait
+HTMLKEY = , (it_Refl), "Reflection", bor_trait
+HTMLKEY = , (it_Rein), "Reincarnated", bor_trait
+HTMLKEY = , (it_Reli), "Relic", bor_trait
+HTMLKEY = , (it_Relo), "Reload", bor_trait
+HTMLKEY = , (it_Repe), "Repeating", bor_trait
+HTMLKEY = , (it_Reso), "Resonant", bor_trait
+HTMLKEY = , (it_Reve), "Revelation", bor_trait
+HTMLKEY = , (it_Rogu), "Rogue", bor_trait
+HTMLKEY = , (it_Sagg), "Saggorak", bor_trait
+HTMLKEY = , (it_Sams), "Samsaran", bor_trait
+HTMLKEY = , (it_Sanc), "Sanctified", bor_trait
+HTMLKEY = , (it_Sara), "Sarangay", bor_trait
+HTMLKEY = , (it_Scat), "Scatter", bor_trait
+HTMLKEY = , (it_Scro), "Scroll", bor_trait
+HTMLKEY = , (it_Scry), "Scrying", bor_trait
+HTMLKEY = , (it_Secr), "Secret", bor_trait
+HTMLKEY = , (it_Shie), "Shield Throw", bor_trait
+HTMLKEY = , (it_Shis), "Shisk", bor_trait
+HTMLKEY = , (it_Shoo), "Shoony", bor_trait
+HTMLKEY = , (it_Shov), "Shove", bor_trait
+HTMLKEY = , (it_Skil), "Skill", bor_trait
+HTMLKEY = , (it_Slee), "Sleep", bor_trait
+HTMLKEY = , (it_Snar), "Snare", bor_trait
+HTMLKEY = , (it_Soci), "Social", bor_trait
+HTMLKEY = , (it_Soni), "Sonic", bor_trait
+HTMLKEY = , (it_Sorc), "Sorcerer", bor_trait
+HTMLKEY = , (it_Spellgu), "Spellgun", bor_trait
+HTMLKEY = , (it_Spellhe), "Spellheart", bor_trait
+HTMLKEY = , (it_Spellsha), "Spellshape", bor_trait
+HTMLKEY = , (it_Spellsho), "Spellshot", bor_trait
+HTMLKEY = , (it_Spla), "Splash", bor_trait
+HTMLKEY = , (it_Staf), "Staff", bor_trait
+HTMLKEY = , (it_Stan), "Stance", bor_trait
+HTMLKEY = , (it_Stea), "Steam", bor_trait
+HTMLKEY = , (it_Stri), "Strix", bor_trait
+HTMLKEY = , (it_Stru), "Structure", bor_trait
+HTMLKEY = , (it_Subt), "Subtle", bor_trait
+HTMLKEY = , (it_Suli), "Suli", bor_trait
+HTMLKEY = , (it_Summ), "Summon", bor_trait
+HTMLKEY = , (it_Summoned), "Summoned", bor_trait
+HTMLKEY = , (it_Summoner), "Summoner", bor_trait
+HTMLKEY = , (it_Surk), "Surki", bor_trait
+HTMLKEY = , (it_Swas), "Swashbuckler", bor_trait
+HTMLKEY = , (it_Swee), "Sweep", bor_trait
+HTMLKEY = , (it_Sylp), "Sylph", bor_trait
+HTMLKEY = , (it_Tali), "Talisman", bor_trait
+HTMLKEY = , (it_Talo), "Talos", bor_trait
+HTMLKEY = , (it_Tand), "Tandem", bor_trait
+HTMLKEY = , (it_Tanu), "Tanuki", bor_trait
+HTMLKEY = , (it_Tatt), "Tattoo", bor_trait
+HTMLKEY = , (it_Tea), "Tea", bor_trait
+HTMLKEY = , (it_Tear), "Tearing", bor_trait
+HTMLKEY = , (it_Tech), "Tech", bor_trait
+HTMLKEY = , (it_Telepa), "Telepathy", bor_trait
+HTMLKEY = , (it_Telepo), "Teleportation", bor_trait
+HTMLKEY = , (it_Teth), "Tethered", bor_trait
+HTMLKEY = , (it_Thau), "Thaumaturge", bor_trait
+HTMLKEY = , (it_Thro), "Thrown", bor_trait
+HTMLKEY = , (it_Tief), "Tiefling", bor_trait
+HTMLKEY = , (it_Trai), "Training", bor_trait
+HTMLKEY = , (it_Transc), "Transcendence", bor_trait
+HTMLKEY = , (it_Transm), "Transmutation", bor_trait
+HTMLKEY = , (it_Trap), "Trap", bor_trait
+HTMLKEY = , (it_Tria), "Trial", bor_trait
+HTMLKEY = , (it_Trip), "Trip", bor_trait
+HTMLKEY = , (it_Tripke), "Tripkee", bor_trait
+HTMLKEY = , (it_Twin), "Twin", bor_trait
+HTMLKEY = , (it_Two-), "Two-Hand", bor_trait
+HTMLKEY = , (it_Unar), "Unarmed", bor_trait
+HTMLKEY = , (it_Unco), "Uncommon", bor_trait
+HTMLKEY = , (it_Undi), "Undine", bor_trait
+HTMLKEY = , (it_Unho), "Unholy", bor_trait
+HTMLKEY = , (it_Uniq), "Unique", bor_trait
+HTMLKEY = , (it_Univ), "Universal", bor_trait
+HTMLKEY = , (it_Unst), "Unstable", bor_trait
+HTMLKEY = , (it_Vana), "Vanara", bor_trait
+HTMLKEY = , (it_Vehi), "Vehicular", bor_trait
+HTMLKEY = , (it_Veno), "Venomous", bor_trait
+HTMLKEY = , (it_Vers), "Versatile", bor_trait
+HTMLKEY = , (it_Vigi), "Vigilante", bor_trait
+HTMLKEY = , (it_Viru), "Virulent", bor_trait
+HTMLKEY = , (it_Vish), "Vishkanya", bor_trait
+HTMLKEY = , (it_Visu), "Visual", bor_trait
+HTMLKEY = , (it_Vita), "Vitality", bor_trait
+HTMLKEY = , (it_Voca), "Vocal", bor_trait
+HTMLKEY = , (it_Void), "Void", bor_trait
+HTMLKEY = , (it_Voll), "Volley", bor_trait
+HTMLKEY = , (it_Wand), "Wand", bor_trait
+HTMLKEY = , (it_Wander), "Wandering", bor_trait
+HTMLKEY = , (it_Wate), "Water", bor_trait
+HTMLKEY = , (it_Waya), "Wayang", bor_trait
+HTMLKEY = , (it_Witc), "Witch", bor_trait
+HTMLKEY = , (it_Wiza), "Wizard", bor_trait
+HTMLKEY = , (it_Wood), "Wood", bor_trait
+HTMLKEY = , (it_Yaks), "Yaksha", bor_trait
+HTMLKEY = , (it_Yaog), "Yaoguai", bor_trait
+
+; Actions
+[action_icon_size] = ((([text_size] - 1) / 72) * 2.56) * 10
+HTMLIMAGE = , (ia_Free), "Icons\ia_FREE.png", [action_icon_size], [action_icon_size], PM
+HTMLIMAGE = , (ia_Long), "Icons\ia_LONG.png", [action_icon_size], [action_icon_size], PM
+HTMLIMAGE = , (ia_OneA), "Icons\ia_ONEA.png", [action_icon_size], [action_icon_size], PM
+HTMLIMAGE = , (ia_Pass), "Icons\ia_PASS.png", [action_icon_size], [action_icon_size], PM
+HTMLIMAGE = , (ia_Reac), "Icons\ia_REAC.png", [action_icon_size], [action_icon_size], PM
+HTMLIMAGE = , (ia_ThrA), "Icons\ia_THRA.png", ([action_icon_size] * 2.11), [action_icon_size], PM
+HTMLIMAGE = , (ia_TwoA), "Icons\ia_TWOA.png", ([action_icon_size] * 1.59), [action_icon_size], PM
+
+
+; ==============================
+; Positioning
+; ==============================
+
+; Borders
+[p_margin_left] = 6%
+[p_margin_right] = 100% - [p_margin_left]
+[p_margin_bot] = 5%
+[p_width] = 100% - ([p_margin_left] * 2)
+[p_vert_space] = 1%
+
+; Card Header
+[p_ch_x] = 26%
+[p_ch_y] = 0.3%
+[p_ch_width] = 100% - (2 * [p_ch_x])
+[p_ch_height] = 2.7%
