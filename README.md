@@ -27,7 +27,10 @@
 
    In order to verify that you have a version that fixes the issue, launch Nandeck and click "Open deck", then open the `Test_DynamicBoxLayout.txt` file. Click "Validate deck" and then "Build deck". If the result is similar to the first image below, all is good. If it is similar to the second image, you need to find a different version.
 
-   ![Proper Result](assets/verify_nandeck_version/proper_result.png) ![Incorrect Result](assets/verify_nandeck_version/incorrect_result.png)
+   |       |       |
+   | ----- | ----- |
+   | <img src="assets/verify_nandeck_version/proper_result.png" style="width:300; height:auto;"> | <img src="assets/verify_nandeck_version/incorrect_result.png" style="width:300; height:auto;"> |
+   
 
 4. **Copy the Google Sheets Template**  
    Create a copy of the [Nandeck PF2e Card Data](https://docs.google.com/spreadsheets/d/1eklVjtuwi2jCBNKpKFjLM-377riymgW4eLRoURrabAw/copy) Google Sheet. This sheet designed to work with the scripts and allow for easy entry of data for new cards.
