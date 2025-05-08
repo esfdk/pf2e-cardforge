@@ -4,11 +4,11 @@ INCLUDE = "PF2e_Shared_Variables.txt"
 
 ;; ==================================================
 ;; == The sheet name to read data from, also used as the directory to save the images in
-;[card_category] = "Simple_Action"
+[card_category] = "Simple_Action"
 ;[card_category] = "Skill_vs_Defense"
 ;[card_category] = "Spells"
+;[card_category] = "Item_Consumables"
 ;[card_category] = "Custom_Cards"
-[card_category] = "Item_Consumables"
 ;; ==================================================
 
 
@@ -18,7 +18,7 @@ LINKNEW = <br>
 
 ;; ==================================================
 ;; == Link to the sheet that's being used for the cards
-LINK = JOIN("GOOGLE_SHEETS_ID_GOES_HERE-377riymgW4eLRoURrabAw", "!", [card_category])
+LINK = JOIN("GOOGLE_SHEETS_ID_GOES_HERE", "!", [card_category])
 ;; ==================================================
 
 
