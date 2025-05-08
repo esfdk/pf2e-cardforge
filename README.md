@@ -4,9 +4,9 @@
 
 |       |       |       |
 | ----- | ----- | ----- |
-| <img src="assets/card_examples/Demoralize_front.png" style="width:33%; height:auto;"> | <img src="assets/card_examples/Feint_front.png" style="width:33%; height:auto;"> | <img src="assets/card_examples/Trip_front.png" style="width:33%; height:auto;"> |
-| <img src="assets/card_examples/Alchemist&apos;s_Fire_(Lesser)_front.png" style="width:33%; height:auto;"> | <img src="assets/card_examples/Alcohol_front.png" style="width:33%; height:auto;"> | <img src="assets/card_examples/Heal_front.png" style="width:33%; height:auto;"> |
-| <img src="assets/card_examples/Elemental_Blast_front.png" style="width:33%; height:auto;"> | <img src="assets/card_examples/Intimidating_Strike_front.png" style="width:33%; height:auto;"> | <img src="assets/card_examples/Vitality_Lash_front.png" style="width:33%; height:auto;"> |
+| <img src="assets/card_examples/Demoralize_front.png" style="width:300; height:auto;"> | <img src="assets/card_examples/Feint_front.png" style="width:300; height:auto;"> | <img src="assets/card_examples/Trip_front.png" style="width:300; height:auto;"> |
+| <img src="assets/card_examples/Alchemist&apos;s_Fire_(Lesser)_front.png" style="width:300; height:auto;"> | <img src="assets/card_examples/Alcohol_front.png" style="width:300; height:auto;"> | <img src="assets/card_examples/Heal_front.png" style="width:300; height:auto;"> |
+| <img src="assets/card_examples/Elemental_Blast_front.png" style="width:300; height:auto;"> | <img src="assets/card_examples/Intimidating_Strike_front.png" style="width:300; height:auto;"> | <img src="assets/card_examples/Vitality_Lash_front.png" style="width:300; height:auto;"> |
 
 
 ## Installation/Setup
