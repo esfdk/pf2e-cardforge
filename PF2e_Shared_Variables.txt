@@ -469,6 +469,7 @@ HTMLKEY = , (it_Tear), "Tearing", bor_trait
 HTMLKEY = , (it_Tech), "Tech", bor_trait
 HTMLKEY = , (it_Telepa), "Telepathy", bor_trait
 HTMLKEY = , (it_Telepo), "Teleportation", bor_trait
+HTMLKEY = , (it_Term), "Terminus", bor_trait
 HTMLKEY = , (it_Teth), "Tethered", bor_trait
 HTMLKEY = , (it_Thau), "Thaumaturge", bor_trait
 HTMLKEY = , (it_Thro), "Thrown", bor_trait
@@ -537,4 +538,5 @@ HTMLIMAGE = , (ia_TwoA), "Icons\ia_TWOA.png", ([action_icon_size] * 1.59), [acti
 [p_ch_x] = 26%
 [p_ch_y] = 0.3%
 [p_ch_width] = 100% - (2 * [p_ch_x])
+
 [p_ch_height] = 2.7%
