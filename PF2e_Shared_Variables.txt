@@ -538,5 +538,4 @@ HTMLIMAGE = , (ia_TwoA), "Icons\ia_TWOA.png", ([action_icon_size] * 1.59), [acti
 [p_ch_x] = 26%
 [p_ch_y] = 0.3%
 [p_ch_width] = 100% - (2 * [p_ch_x])
-
 [p_ch_height] = 2.7%
