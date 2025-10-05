@@ -444,6 +444,7 @@ HTMLKEY = , (it_Spellgu), "Spellgun", bor_trait
 HTMLKEY = , (it_Spellhe), "Spellheart", bor_trait
 HTMLKEY = , (it_Spellsha), "Spellshape", bor_trait
 HTMLKEY = , (it_Spellsho), "Spellshot", bor_trait
+HTMLKEY = , (it_Spirit), "Spirit", bor_trait
 HTMLKEY = , (it_Spla), "Splash", bor_trait
 HTMLKEY = , (it_Staf), "Staff", bor_trait
 HTMLKEY = , (it_Stan), "Stance", bor_trait
@@ -539,3 +540,4 @@ HTMLIMAGE = , (ia_TwoA), "Icons\ia_TWOA.png", ([action_icon_size] * 1.59), [acti
 [p_ch_y] = 0.3%
 [p_ch_width] = 100% - (2 * [p_ch_x])
 [p_ch_height] = 2.7%
+
